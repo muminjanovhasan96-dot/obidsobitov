@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 /**
  * Admin login. Checks the password against the ADMIN_PASSWORD env var
- * (default "obidsobitov" — CHANGE IT in .env.local / Vercel env for production).
+ * (default "7777" — override with ADMIN_PASSWORD in .env.local / Vercel env).
  * Keeps the password out of the client bundle.
  */
 export async function POST(request: Request) {
@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 
-  const expected = process.env.ADMIN_PASSWORD || "obidsobitov";
+  const expected = process.env.ADMIN_PASSWORD || "7777";
   if (password && password === expected) {
     return NextResponse.json({ ok: true });
   }

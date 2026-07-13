@@ -135,7 +135,7 @@ export function AdminApp() {
           <button type="submit" className="mt-5 h-11 w-full bg-emerald text-[12px] uppercase tracking-label text-ivory transition-colors hover:bg-gold hover:text-emerald-deep">
             Kirish
           </button>
-          <p className="mt-4 text-[11px] text-muted/70">Standart parol: obidsobitov (ADMIN_PASSWORD env orqali o'zgartiring)</p>
+          <p className="mt-4 text-[11px] text-muted/70">Standart parol: 7777 (ADMIN_PASSWORD env orqali o'zgartiring)</p>
         </form>
       </div>
     );

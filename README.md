@@ -139,7 +139,7 @@ delete products (all fields: name, brand, price, images, **review video**,
 trilingual descriptions, specs, featured, availability).
 
 - Open **`/admin`** and sign in. Password comes from `ADMIN_PASSWORD`
-  (default `obidsobitov` — **change it**).
+  (default `7777` — set a strong one via env for production).
 - Edits are saved in the browser (`localStorage`) and are **live immediately**
   for that browser. To publish them to **all visitors**, click **Export** and
   either (a) commit the downloaded `obid-products.json` (a developer wires it in),
