@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "title": "OBID SOBITOV — Hashamatli soatlar va dizayner buyumlar",
+    "description": "Toshkentdagi hashamat butigi. Original soatlar, dizayner kiyim, sumka va aksessuarlar. Har qanday luks buyumni buyurtma asosida olib kelamiz."
+  },
+  "brand": {
+    "name": "OBID SOBITOV",
+    "signature": "Toshkent · Mirabad ko'chasi"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "catalog": "Katalog",
+    "concierge": "Konsyerj",
+    "about": "Biz haqimizda",
+    "cart": "Savat",
+    "menu": "Menyu",
+    "close": "Yopish"
+  },
+  "actions": {
+    "viewCatalog": "Katalogni ko'rish",
+    "view": "Ko'rish",
+    "viewProduct": "Batafsil",
+    "addToCart": "Savatga qo'shish",
+    "added": "Qo'shildi",
+    "askTelegram": "Telegram orqali so'rash",
+    "orderTelegram": "Telegram orqali buyurtma",
+    "requestConcierge": "Buyurtma berish",
+    "explore": "Batafsil",
+    "continueShopping": "Xaridni davom ettirish",
+    "checkout": "Rasmiylashtirish",
+    "backToCatalog": "Katalogga qaytish",
+    "sendRequest": "So'rov yuborish",
+    "readMore": "Batafsil o'qish",
+    "call": "Qo'ng'iroq qilish"
+  },
+  "categories": {
+    "all": "Barchasi",
+    "watches": "Soatlar",
+    "clothing": "Kiyim",
+    "bags": "Sumkalar",
+    "accessories": "Aksessuarlar"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Toshkent · Hashamat butigi",
+      "tagline": "Hashamat, ishonch bilan yetkaziladi.",
+      "sub": "Original soatlar, dizayner kiyim va noyob aksessuarlar — tanlangan did bilan.",
+      "cta": "Katalogni ko'rish",
+      "ctaSecondary": "Konsyerj xizmati",
+      "scroll": "Pastga suring"
+    },
+    "featured": {
+      "eyebrow": "Tanlangan to'plam",
+      "title": "Nodir soatlar",
+      "subtitle": "Dunyoning eng nufuzli manufakturalaridan tanlab olingan asarlar.",
+      "cta": "Barcha soatlar"
+    },
+    "categories": {
+      "eyebrow": "Kategoriyalar",
+      "title": "Bir uyda — butun did",
+      "subtitle": "Har bir bo'lim ziyofatga arziydigan tanlov bilan to'ldirilgan."
+    },
+    "concierge": {
+      "eyebrow": "Konsyerj xizmati",
+      "title": "Biz siz uchun olib kelamiz",
+      "body": "Dunyoning istalgan butigidan xohlagan buyumingizni — soat, sumka yoki kiyim bo'ladimi — asl holida, kafolat bilan yetkazib beramiz. Siz orzu qilasiz, biz topamiz.",
+      "cta": "Buyurtma berish"
+    },
+    "trust": {
+      "title": "Nega OBID SOBITOV",
+      "original": {
+        "title": "100% Original",
+        "text": "Har bir buyum haqiqiyligi tasdiqlangan holda taqdim etiladi."
+      },
+      "warranty": {
+        "title": "Kafolat",
+        "text": "Rasmiy hujjatlar va butik kafolati bilan."
+      },
+      "delivery": {
+        "title": "Yetkazib berish",
+        "text": "Toshkent bo'ylab maxfiy va xavfsiz yetkazish."
+      },
+      "payment": {
+        "title": "Xavfsiz to'lov",
+        "text": "Payme, Click, Uzcard/Humo yoki naqd."
+      }
+    },
+    "instagram": {
+      "eyebrow": "Instagram",
+      "title": "Kundalik tanlovlarimiz bilan tanishing",
+      "handle": "@obidsobitov_",
+      "cta": "Kuzatib boring"
+    }
+  },
+  "catalog": {
+    "eyebrow": "To'plam",
+    "title": "Katalog",
+    "subtitle": "Diqqat bilan tanlangan hashamatli buyumlar to'plami.",
+    "filters": {
+      "title": "Saralash",
+      "category": "Kategoriya",
+      "brand": "Brend",
+      "price": "Narx oralig'i",
+      "min": "Eng kam",
+      "max": "Eng ko'p",
+      "clear": "Tozalash",
+      "results": "{count} ta buyum",
+      "noResults": "Buyum topilmadi",
+      "noResultsHint": "Saralash shartlarini o'zgartirib ko'ring."
+    },
+    "sort": {
+      "label": "Tartiblash",
+      "newest": "Yangi kelganlar",
+      "priceAsc": "Narx: arzondan qimmatga",
+      "priceDesc": "Narx: qimmatdan arzonga"
+    }
+  },
+  "product": {
+    "specs": "Xususiyatlari",
+    "description": "Tavsif",
+    "related": "O'xshash buyumlar",
+    "sku": "Artikul",
+    "availability": "Mavjudligi",
+    "inStock": "Sotuvda mavjud",
+    "onOrder": "Buyurtma asosida",
+    "quantity": "Miqdori",
+    "authenticity": {
+      "title": "Haqiqiylik kafolati",
+      "text": "Har bir buyum ekspertlarimiz tomonidan tekshiriladi va asl hujjatlari bilan taqdim etiladi."
+    },
+    "delivery": {
+      "title": "Maxfiy yetkazib berish",
+      "text": "Toshkent bo'ylab xavfsiz yetkazamiz. Viloyatlarga jo'natish kelishilgan holda."
+    },
+    "telegramMessage": "Assalomu alaykum! Ushbu buyum bilan qiziqyapman: {name} ({brand}). Narxi: {price}."
+  },
+  "concierge": {
+    "eyebrow": "Konsyerj",
+    "title": "Har qanday luks buyumni olib kelamiz",
+    "lead": "Ma'lum bir model, cheklangan seriya yoki topilishi qiyin buyumni izlayapsizmi? Bizga aytib qo'ying — qidiruvdan yetkazishgacha bo'lgan barcha tashvishni o'z zimmamizga olamiz.",
+    "steps": {
+      "one": {
+        "title": "Aytib qo'ying",
+        "text": "Havola, rasm yoki oddiy tavsif — buyumingizni qanday tasavvur qilsangiz, shunday."
+      },
+      "two": {
+        "title": "Biz topamiz",
+        "text": "Ishonchli manbalar orqali narx va haqiqiylikni tasdiqlab, taklif tayyorlaymiz."
+      },
+      "three": {
+        "title": "Yetkazamiz",
+        "text": "Buyum asl holida, kafolat bilan sizga xavfsiz yetkaziladi."
+      }
+    },
+    "form": {
+      "title": "So'rov qoldiring",
+      "name": "Ismingiz",
+      "namePlaceholder": "Ism familiya",
+      "contact": "Telefon yoki Telegram",
+      "contactPlaceholder": "+998 90 000 00 00 yoki @username",
+      "item": "Buyum havolasi yoki tavsifi",
+      "itemPlaceholder": "Masalan: Rolex Datejust 41, kumush rang, yoki mahsulot havolasi",
+      "budget": "Byudjet oralig'i",
+      "budgetPlaceholder": "Masalan: 50 000 000 – 120 000 000 so'm",
+      "notes": "Qo'shimcha izohlar",
+      "notesPlaceholder": "O'lcham, rang, muddat yoki boshqa istaklar",
+      "submit": "So'rovni yuborish",
+      "sendTelegram": "Telegram orqali yuborish",
+      "success": {
+        "title": "So'rovingiz qabul qilindi",
+        "text": "Tez orada siz bilan bog'lanamiz. Xohlasangiz, so'rovni Telegram orqali ham darhol yuborishingiz mumkin.",
+        "another": "Yangi so'rov yuborish"
+      },
+      "telegramMessage": "Konsyerj so'rovi:\nIsm: {name}\nAloqa: {contact}\nBuyum: {item}\nByudjet: {budget}\nIzoh: {notes}"
+    }
+  },
+  "cart": {
+    "title": "Savat",
+    "empty": "Savatingiz bo'sh",
+    "emptyHint": "Katalogimizdan siz uchun eng nafis buyumlarni tanlang.",
+    "browse": "Katalogga o'tish",
+    "item": "Buyum",
+    "price": "Narx",
+    "quantity": "Miqdori",
+    "lineTotal": "Jami",
+    "remove": "O'chirish",
+    "summary": "Buyurtma xulosasi",
+    "subtotal": "Oraliq jami",
+    "delivery": "Yetkazib berish",
+    "deliveryValue": "Rasmiylashtirishda hisoblanadi",
+    "total": "Umumiy",
+    "checkout": "Rasmiylashtirishga o'tish",
+    "view": "Savatni ko'rish",
+    "miniTitle": "Savatingiz",
+    "note": "Narxlar so'mda ko'rsatilgan. Yakuniy summa rasmiylashtirishda tasdiqlanadi."
+  },
+  "checkout": {
+    "title": "Rasmiylashtirish",
+    "subtitle": "Buyurtmangizni yakunlash uchun ma'lumotlarni kiriting.",
+    "contact": {
+      "title": "Aloqa ma'lumotlari",
+      "name": "Ism familiya",
+      "phone": "Telefon raqami",
+      "email": "Email (ixtiyoriy)",
+      "telegram": "Telegram (ixtiyoriy)"
+    },
+    "delivery": {
+      "title": "Yetkazib berish",
+      "city": "Shahar",
+      "address": "Manzil",
+      "addressPlaceholder": "Ko'cha, uy, kvartira",
+      "notes": "Kuryer uchun izoh",
+      "notesPlaceholder": "Qulay vaqt yoki qo'shimcha ko'rsatmalar"
+    },
+    "payment": {
+      "title": "To'lov usuli",
+      "subtitle": "Qulay usulni tanlang. To'lov integratsiyasi tez orada ulanadi.",
+      "payme": "Payme",
+      "paymeHint": "Karta yoki Payme ilovasi orqali",
+      "click": "Click",
+      "clickHint": "Click ilovasi orqali",
+      "uzcard": "Uzcard / Humo",
+      "uzcardHint": "Bank kartasi orqali",
+      "telegram": "Telegram orqali buyurtma",
+      "telegramHint": "Menejer siz bilan bog'lanadi",
+      "soon": "Tez orada"
+    },
+    "summary": "Buyurtma xulosasi",
+    "place": "Buyurtmani tasdiqlash",
+    "success": {
+      "title": "Buyurtmangiz qabul qilindi",
+      "text": "Rahmat! Menejerimiz buyurtmani tasdiqlash uchun tez orada bog'lanadi.",
+      "home": "Bosh sahifaga qaytish"
+    },
+    "empty": "Rasmiylashtirish uchun savatingiz bo'sh.",
+    "telegramMessage": "Yangi buyurtma:\n{items}\nJami: {total}\nMijoz: {name}, {phone}"
+  },
+  "about": {
+    "eyebrow": "Biz haqimizda",
+    "title": "Did — bu tafsilotlardagi ishonch",
+    "lead": "OBID SOBITOV — Toshkentda hashamat va ishonchni birlashtirgan shaxsiy butik. Biz nafaqat buyum sotamiz, balki har bir mijoz uchun alohida did va e'tiborni taqdim etamiz.",
+    "storyTitle": "Bizning yo'limiz",
+    "story1": "Biz eng nufuzli soat manufakturalari, dizayner uylari va noyob aksessuarlar dunyosini Toshkentga yaqinlashtirdik. Har bir tanlov — did, haqiqiylik va bezovtasiz xizmatning uyg'unligi.",
+    "story2": "Mijozlarimiz biz bilan bir marta emas, umr bo'yi ishlaydi. Chunki biz sotgan buyum ortida — ism, kafolat va shaxsiy munosabat turadi.",
+    "values": {
+      "authenticity": {
+        "title": "Haqiqiylik",
+        "text": "Faqat original buyumlar, tasdiqlangan manbalar."
+      },
+      "discretion": {
+        "title": "Maxfiylik",
+        "text": "Har bir mijoz bilan muloqot — ishonchli va shaxsiy."
+      },
+      "care": {
+        "title": "E'tibor",
+        "text": "Tanlovdan yetkazishgacha — har bir tafsilot muhim."
+      }
+    },
+    "contact": {
+      "title": "Bog'lanish",
+      "addressLabel": "Manzil",
+      "address": "Mirabad ko'chasi, Toshkent, O'zbekiston",
+      "phoneLabel": "Telefon",
+      "hoursLabel": "Ish vaqti",
+      "hours": "Dushanba – Yakshanba · 10:00 – 20:00",
+      "instagramLabel": "Instagram",
+      "mapTitle": "Butik joylashuvi"
+    }
+  },
+  "footer": {
+    "tagline": "Toshkentdagi hashamat butigi. Original soatlar, dizayner buyumlari va shaxsiy konsyerj xizmati.",
+    "newsletter": {
+      "title": "Yangi kelganlardan xabardor bo'ling",
+      "text": "Yopiq to'plamlar va tanlangan buyumlar haqida birinchilardan bo'lib biling.",
+      "placeholder": "Email manzilingiz",
+      "button": "Obuna bo'lish",
+      "success": "Rahmat — obuna qabul qilindi."
+    },
+    "exploreTitle": "Bo'limlar",
+    "contactTitle": "Aloqa",
+    "hours": "Har kuni · 10:00 – 20:00",
+    "paymentTitle": "To'lov usullari",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "crafted": "Nafislik bilan Toshkentda tayyorlandi."
+  },
+  "search": {
+    "title": "Qidiruv",
+    "placeholder": "Brend yoki mahsulot nomi...",
+    "results": "{count} ta natija",
+    "noResults": "Hech narsa topilmadi",
+    "hint": "Masalan: Rolex, sumka, Patek Philippe"
+  },
+  "wishlist": {
+    "title": "Saqlanganlar",
+    "subtitle": "Sizga yoqqan buyumlar to'plami.",
+    "empty": "Saqlangan buyumlar yo'q",
+    "emptyHint": "Yoqqan buyumlarni yurakcha belgisi bilan saqlab qo'ying.",
+    "add": "Saqlash",
+    "remove": "Saqlanganlardan olib tashlash"
+  },
+  "recently": {
+    "title": "So'nggi ko'rilgan"
+  },
+  "lookbook": {
+    "eyebrow": "Lookbook",
+    "title": "Uslub — tafsilotlar tili",
+    "body": "Har bir buyum — did va xarakter ifodasi. Bizning tanlovimiz bilan o'z uslubingizni kashf eting.",
+    "cta": "To'plamni ko'rish"
+  },
+  "testimonials": {
+    "eyebrow": "Mijozlar",
+    "title": "Ishonch bilan aytilgan so'zlar",
+    "items": {
+      "one": {
+        "text": "Rolex'ni ishonch bilan shu yerdan oldim. Xizmat va originallik — benuqson.",
+        "author": "Jamshid A.",
+        "role": "Doimiy mijoz"
+      },
+      "two": {
+        "text": "Konsyerj xizmati orqali Parijdan sumka olib kelishdi. Tez va halol.",
+        "author": "Dilnoza R.",
+        "role": "Toshkent"
+      },
+      "three": {
+        "text": "Haqiqiy hashamat va shaxsiy munosabat. Tavsiya qilaman.",
+        "author": "Sardor K.",
+        "role": "Kollektsioner"
+      }
+    }
+  },
+  "theme": {
+    "label": "Mavzu",
+    "light": "Yorug'",
+    "dark": "To'q"
+  },
+  "intro": {
+    "tagline": "Hashamat butigi · Toshkent",
+    "welcome": "Xush kelibsiz"
+  },
+  "language": {
+    "label": "Til"
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "text": "Kechirasiz, siz izlagan sahifa mavjud emas.",
+    "cta": "Bosh sahifaga qaytish"
+  }
+}

@@ -1,0 +1,298 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/*  OBID SOBITOV — global base styles                                   */
+/* ------------------------------------------------------------------ */
+
+@layer base {
+  :root {
+    --header-h: 72px;
+
+    /* Light theme (default) — warm ivory */
+    --c-base: 247 245 239;
+    --c-surface: 255 255 255;
+    --c-surface-2: 240 236 225;
+    --c-ink: 26 33 30;
+    --c-muted: 107 114 108;
+    --c-heading: #0e3b2e;
+    --c-line: rgba(26, 33, 30, 0.12);
+    --c-line-strong: rgba(26, 33, 30, 0.2);
+    --c-hairline: rgba(194, 161, 90, 0.3);
+    color-scheme: light;
+  }
+
+  /* Dark theme — deep emerald */
+  :root[data-theme="dark"] {
+    --c-base: 9 34 26;
+    --c-surface: 16 46 36;
+    --c-surface-2: 23 55 43;
+    --c-ink: 245 243 239;
+    --c-muted: 156 166 156;
+    --c-heading: #f5f3ef;
+    --c-line: rgba(245, 243, 239, 0.14);
+    --c-line-strong: rgba(245, 243, 239, 0.22);
+    --c-hairline: rgba(194, 161, 90, 0.4);
+    color-scheme: dark;
+  }
+
+  /* In dark mode, "emerald" brand TEXT (headings, prices, active states) would
+     vanish on the dark bg — flip it to ivory. Backgrounds keep their emerald. */
+  :root[data-theme="dark"] .text-emerald {
+    color: #f5f3ef;
+  }
+  :root[data-theme="dark"] .hover\:text-emerald:hover {
+    color: #f5f3ef;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-base text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Guard against accidental horizontal scroll. `clip` (not `hidden`) does
+       not create a scroll container, so it never breaks position: sticky. */
+    overflow-x: clip;
+  }
+
+  /* Refined serif headings by default — emerald on ivory reads brand/couture.
+     Override with text-base (ivory) on emerald backgrounds (e.g. footer). */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+    color: var(--c-heading);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+
+  /* Large display headings get even tighter optical tracking */
+  .display {
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 0.98;
+  }
+
+  /* Tabular figures for prices so columns align */
+  .nums {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+
+  ::selection {
+    background: rgba(194, 161, 90, 0.35);
+    color: #0e3b2e;
+  }
+
+  /* Subtle, on-brand scrollbar (desktop) */
+  ::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #efeade;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbc7b8;
+    border-radius: 999px;
+    border: 3px solid #efeade;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0e3b2e;
+  }
+
+  /* Elegant focus ring — visible but restrained */
+  :focus-visible {
+    outline: 1px solid #0e3b2e;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Uppercase eyebrow / label used across the site */
+  .eyebrow {
+    @apply text-[11px] uppercase tracking-label text-gold;
+  }
+
+  /* 1px gold hairline divider */
+  .hairline {
+    @apply border-hairline;
+  }
+
+  /* Thin gold divider used between sections (accent) */
+  .rule-gold {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(201, 169, 106, 0.35),
+      transparent
+    );
+  }
+
+  /* Neutral 1px rule — the default structural divider */
+  .rule {
+    height: 1px;
+    background: rgba(26, 33, 30, 0.12);
+  }
+
+  /* Fixed film-grain texture — sits above the base, below content.
+     Removes the "flat digital" look and adds a subtle luxe depth. */
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Edge fade mask for marquees */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+  }
+
+  /* Pause marquee on hover (respectful, premium feel) */
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* Underline-on-hover for text links */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Loading shimmer placeholder for images */
+  .img-skeleton {
+    background: linear-gradient(
+      100deg,
+      #f0ece1 30%,
+      #ffffff 50%,
+      #f0ece1 70%
+    );
+    background-size: 200% 100%;
+  }
+
+  /* Dual-thumb price range slider (catalog filters) */
+  input[type="range"].price-range {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: transparent;
+    pointer-events: none;
+  }
+  input[type="range"].price-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    pointer-events: auto;
+    height: 14px;
+    width: 14px;
+    border-radius: 999px;
+    background: #c9a96a;
+    border: 2px solid #0b0b0c;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  input[type="range"].price-range::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+  }
+  input[type="range"].price-range::-moz-range-thumb {
+    pointer-events: auto;
+    height: 14px;
+    width: 14px;
+    border: 2px solid #0b0b0c;
+    border-radius: 999px;
+    background: #c9a96a;
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  /* Emerald-tinted gradient overlays for imagery that carries text */
+  .overlay-bottom {
+    background: linear-gradient(
+      to top,
+      rgba(10, 42, 33, 0.9) 0%,
+      rgba(10, 42, 33, 0.45) 40%,
+      rgba(10, 42, 33, 0.12) 70%,
+      rgba(10, 42, 33, 0) 100%
+    );
+  }
+  .overlay-full {
+    background: radial-gradient(
+      120% 90% at 50% 20%,
+      rgba(10, 42, 33, 0.2) 0%,
+      rgba(10, 42, 33, 0.6) 70%,
+      rgba(10, 42, 33, 0.8) 100%
+    );
+  }
+
+  /* Subtle metallic text for the occasional accent word */
+  .text-metallic {
+    background: linear-gradient(180deg, #e8d6a8 0%, #c9a96a 55%, #a98b52 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Vertical rotated label (editorial side-notes) */
+  .vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
+
+/* Respect reduced-motion: stop marquees & grain shimmer */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+  .grain {
+    display: none;
+  }
+}

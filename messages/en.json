@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "title": "OBID SOBITOV — Luxury Watches & Designer Pieces",
+    "description": "A luxury concierge boutique in Tashkent. Original watches, designer clothing, bags and accessories. We source any luxury piece on request."
+  },
+  "brand": {
+    "name": "OBID SOBITOV",
+    "signature": "Tashkent · Mirabad Avenue"
+  },
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "concierge": "Concierge",
+    "about": "About",
+    "cart": "Cart",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "actions": {
+    "viewCatalog": "View the catalog",
+    "view": "View",
+    "viewProduct": "View piece",
+    "addToCart": "Add to cart",
+    "added": "Added",
+    "askTelegram": "Ask via Telegram",
+    "orderTelegram": "Order via Telegram",
+    "requestConcierge": "Make a request",
+    "explore": "Explore",
+    "continueShopping": "Continue shopping",
+    "checkout": "Checkout",
+    "backToCatalog": "Back to catalog",
+    "sendRequest": "Send request",
+    "readMore": "Read more",
+    "call": "Call us"
+  },
+  "categories": {
+    "all": "All",
+    "watches": "Watches",
+    "clothing": "Clothing",
+    "bags": "Bags",
+    "accessories": "Accessories"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Tashkent · Luxury Boutique",
+      "tagline": "Luxury, delivered with trust.",
+      "sub": "Original timepieces, designer clothing and rare accessories — curated with impeccable taste.",
+      "cta": "View the catalog",
+      "ctaSecondary": "Concierge service",
+      "scroll": "Scroll"
+    },
+    "featured": {
+      "eyebrow": "Curated selection",
+      "title": "Rare Timepieces",
+      "subtitle": "Pieces hand-picked from the world's most prestigious manufactures.",
+      "cta": "All watches"
+    },
+    "categories": {
+      "eyebrow": "Categories",
+      "title": "Every taste, under one roof",
+      "subtitle": "Each department is filled with a selection worthy of the occasion."
+    },
+    "concierge": {
+      "eyebrow": "Concierge service",
+      "title": "We bring it to you",
+      "body": "Any piece from any boutique in the world — a watch, a bag or a garment — delivered original and guaranteed. You imagine it; we find it.",
+      "cta": "Make a request"
+    },
+    "trust": {
+      "title": "Why OBID SOBITOV",
+      "original": {
+        "title": "100% Original",
+        "text": "Every piece is presented with verified authenticity."
+      },
+      "warranty": {
+        "title": "Warranty",
+        "text": "With official documents and the boutique's own guarantee."
+      },
+      "delivery": {
+        "title": "Delivery",
+        "text": "Discreet, secure delivery across Tashkent."
+      },
+      "payment": {
+        "title": "Secure payment",
+        "text": "Payme, Click, Uzcard/Humo or cash."
+      }
+    },
+    "instagram": {
+      "eyebrow": "Instagram",
+      "title": "Step inside our daily selections",
+      "handle": "@obidsobitov_",
+      "cta": "Follow us"
+    }
+  },
+  "catalog": {
+    "eyebrow": "The collection",
+    "title": "Catalog",
+    "subtitle": "A carefully curated collection of luxury pieces.",
+    "filters": {
+      "title": "Filters",
+      "category": "Category",
+      "brand": "Brand",
+      "price": "Price range",
+      "min": "Min",
+      "max": "Max",
+      "clear": "Clear",
+      "results": "{count} pieces",
+      "noResults": "Nothing found",
+      "noResultsHint": "Try adjusting your filters."
+    },
+    "sort": {
+      "label": "Sort",
+      "newest": "New arrivals",
+      "priceAsc": "Price: low to high",
+      "priceDesc": "Price: high to low"
+    }
+  },
+  "product": {
+    "specs": "Specifications",
+    "description": "Description",
+    "related": "You may also like",
+    "sku": "Reference",
+    "availability": "Availability",
+    "inStock": "In stock",
+    "onOrder": "On request",
+    "quantity": "Quantity",
+    "authenticity": {
+      "title": "Authenticity guaranteed",
+      "text": "Every piece is verified by our experts and delivered with its original documentation."
+    },
+    "delivery": {
+      "title": "Discreet delivery",
+      "text": "Secure delivery across Tashkent. Shipping to the regions by arrangement."
+    },
+    "telegramMessage": "Hello! I'm interested in this piece: {name} ({brand}). Price: {price}."
+  },
+  "concierge": {
+    "eyebrow": "Concierge",
+    "title": "We source any luxury piece",
+    "lead": "Looking for a specific model, a limited edition or a hard-to-find piece? Simply tell us — we handle everything from the search to the delivery.",
+    "steps": {
+      "one": {
+        "title": "Tell us",
+        "text": "A link, a photo or a simple description — however you picture the piece."
+      },
+      "two": {
+        "title": "We source it",
+        "text": "Through trusted sources we confirm price and authenticity, then prepare an offer."
+      },
+      "three": {
+        "title": "We deliver",
+        "text": "The piece reaches you original, guaranteed and securely."
+      }
+    },
+    "form": {
+      "title": "Leave a request",
+      "name": "Your name",
+      "namePlaceholder": "First and last name",
+      "contact": "Phone or Telegram",
+      "contactPlaceholder": "+998 90 000 00 00 or @username",
+      "item": "Item link or description",
+      "itemPlaceholder": "e.g. Rolex Datejust 41, silver, or a link to the item",
+      "budget": "Budget range",
+      "budgetPlaceholder": "e.g. 50,000,000 – 120,000,000 UZS",
+      "notes": "Additional notes",
+      "notesPlaceholder": "Size, colour, timing or any other wishes",
+      "submit": "Send request",
+      "sendTelegram": "Send via Telegram",
+      "success": {
+        "title": "Your request has been received",
+        "text": "We'll be in touch shortly. If you like, you can also send the request instantly via Telegram.",
+        "another": "Send another request"
+      },
+      "telegramMessage": "Concierge request:\nName: {name}\nContact: {contact}\nItem: {item}\nBudget: {budget}\nNotes: {notes}"
+    }
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty",
+    "emptyHint": "Choose the finest pieces for yourself from our catalog.",
+    "browse": "Go to catalog",
+    "item": "Item",
+    "price": "Price",
+    "quantity": "Quantity",
+    "lineTotal": "Total",
+    "remove": "Remove",
+    "summary": "Order summary",
+    "subtotal": "Subtotal",
+    "delivery": "Delivery",
+    "deliveryValue": "Calculated at checkout",
+    "total": "Total",
+    "checkout": "Proceed to checkout",
+    "view": "View cart",
+    "miniTitle": "Your cart",
+    "note": "Prices are shown in UZS. The final amount is confirmed at checkout."
+  },
+  "checkout": {
+    "title": "Checkout",
+    "subtitle": "Enter your details to complete the order.",
+    "contact": {
+      "title": "Contact details",
+      "name": "Full name",
+      "phone": "Phone number",
+      "email": "Email (optional)",
+      "telegram": "Telegram (optional)"
+    },
+    "delivery": {
+      "title": "Delivery",
+      "city": "City",
+      "address": "Address",
+      "addressPlaceholder": "Street, building, apartment",
+      "notes": "Note for the courier",
+      "notesPlaceholder": "Convenient time or extra instructions"
+    },
+    "payment": {
+      "title": "Payment method",
+      "subtitle": "Choose a convenient method. Payment integration will be connected soon.",
+      "payme": "Payme",
+      "paymeHint": "By card or the Payme app",
+      "click": "Click",
+      "clickHint": "Via the Click app",
+      "uzcard": "Uzcard / Humo",
+      "uzcardHint": "By bank card",
+      "telegram": "Order via Telegram",
+      "telegramHint": "A manager will contact you",
+      "soon": "Soon"
+    },
+    "summary": "Order summary",
+    "place": "Confirm order",
+    "success": {
+      "title": "Your order has been received",
+      "text": "Thank you! Our manager will contact you shortly to confirm the order.",
+      "home": "Back to home"
+    },
+    "empty": "Your cart is empty for checkout.",
+    "telegramMessage": "New order:\n{items}\nTotal: {total}\nCustomer: {name}, {phone}"
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "Taste is trust in the details",
+    "lead": "OBID SOBITOV is a personal boutique in Tashkent that unites luxury and trust. We don't simply sell pieces — we offer every client a rare kind of attention and taste.",
+    "storyTitle": "Our journey",
+    "story1": "We brought the world of leading watch manufactures, designer houses and rare accessories closer to Tashkent. Every choice is a harmony of taste, authenticity and effortless service.",
+    "story2": "Our clients stay with us not for a single purchase but for a lifetime — because behind every piece stands a name, a guarantee and a personal relationship.",
+    "values": {
+      "authenticity": {
+        "title": "Authenticity",
+        "text": "Only original pieces, from verified sources."
+      },
+      "discretion": {
+        "title": "Discretion",
+        "text": "Every client relationship is private and personal."
+      },
+      "care": {
+        "title": "Attention",
+        "text": "From selection to delivery, every detail matters."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "addressLabel": "Address",
+      "address": "Mirabad Avenue, Tashkent, Uzbekistan",
+      "phoneLabel": "Phone",
+      "hoursLabel": "Opening hours",
+      "hours": "Monday – Sunday · 10:00 – 20:00",
+      "instagramLabel": "Instagram",
+      "mapTitle": "Boutique location"
+    }
+  },
+  "footer": {
+    "tagline": "A luxury boutique in Tashkent. Original watches, designer pieces and a personal concierge service.",
+    "newsletter": {
+      "title": "Hear about new arrivals first",
+      "text": "Be the first to know about private collections and curated pieces.",
+      "placeholder": "Your email address",
+      "button": "Subscribe",
+      "success": "Thank you — you're subscribed."
+    },
+    "exploreTitle": "Explore",
+    "contactTitle": "Contact",
+    "hours": "Daily · 10:00 – 20:00",
+    "paymentTitle": "Payment methods",
+    "rights": "All rights reserved.",
+    "crafted": "Crafted with elegance in Tashkent."
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Brand or product name...",
+    "results": "{count} results",
+    "noResults": "Nothing found",
+    "hint": "e.g. Rolex, bag, Patek Philippe"
+  },
+  "wishlist": {
+    "title": "Wishlist",
+    "subtitle": "Your collection of saved pieces.",
+    "empty": "No saved pieces yet",
+    "emptyHint": "Save the pieces you love with the heart icon.",
+    "add": "Save",
+    "remove": "Remove from wishlist"
+  },
+  "recently": {
+    "title": "Recently viewed"
+  },
+  "lookbook": {
+    "eyebrow": "Lookbook",
+    "title": "Style is the language of detail",
+    "body": "Every piece is an expression of taste and character. Discover your own style through our selection.",
+    "cta": "View the collection"
+  },
+  "testimonials": {
+    "eyebrow": "Clients",
+    "title": "Words spoken with trust",
+    "items": {
+      "one": {
+        "text": "Bought my Rolex here with complete confidence. Service and authenticity — impeccable.",
+        "author": "Jamshid A.",
+        "role": "Returning client"
+      },
+      "two": {
+        "text": "Through the concierge they brought a bag from Paris. Fast and honest.",
+        "author": "Dilnoza R.",
+        "role": "Tashkent"
+      },
+      "three": {
+        "text": "True luxury and a personal touch. Highly recommend.",
+        "author": "Sardor K.",
+        "role": "Collector"
+      }
+    }
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "intro": {
+    "tagline": "Luxury boutique · Tashkent",
+    "welcome": "Welcome"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "Sorry, the page you're looking for doesn't exist.",
+    "cta": "Back to home"
+  }
+}
