@@ -6,11 +6,13 @@ import { ProductCard } from "@/components/ProductCard";
 import { ArrowLink } from "@/components/ui/ArrowLink";
 import { RevealLines } from "@/components/ui/RevealLines";
 import { StaggerGroup, StaggerItem } from "@/components/ui/AnimatedReveal";
-import { getFeaturedWatches } from "@/data/products";
+import { useProducts } from "@/context/ProductsContext";
+import { featuredWatches } from "@/lib/catalog";
 
 export function FeaturedTimepieces() {
   const { t } = useLocale();
-  const watches = getFeaturedWatches(6);
+  const { products } = useProducts();
+  const watches = featuredWatches(products, 6);
 
   return (
     <Section>

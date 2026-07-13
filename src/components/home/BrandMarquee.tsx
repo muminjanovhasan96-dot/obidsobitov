@@ -1,12 +1,12 @@
 "use client";
 
 import { Marquee } from "@/components/ui/Marquee";
-import { getBrands } from "@/data/products";
-
-// Maisons carried — pulled from the catalog so it stays in sync.
-const BRANDS = getBrands();
+import { useProducts } from "@/context/ProductsContext";
+import { brandsOf } from "@/lib/catalog";
 
 export function BrandMarquee() {
+  const { products } = useProducts();
+  const BRANDS = brandsOf(products);
   return (
     <div className="border-y border-line bg-base py-7">
       <Marquee speed="marquee-slow">

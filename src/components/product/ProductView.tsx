@@ -10,35 +10,66 @@ import {
   ShieldCheck,
   Truck,
   Send,
+  PlayCircle,
 } from "lucide-react";
 import { useLocale } from "@/context/LocaleContext";
 import { useCart } from "@/context/CartContext";
+import { useProducts } from "@/context/ProductsContext";
 import { Button } from "@/components/ui/Button";
 import { ProductGallery } from "./ProductGallery";
 import { ProductCard } from "@/components/ProductCard";
 import { RecentlyViewed } from "./RecentlyViewed";
+import { VideoModal } from "./VideoModal";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { GoldRule } from "@/components/ui/Section";
 import { resolveText } from "@/lib/text";
 import { formatPrice } from "@/lib/format";
 import { telegramLink } from "@/config/site";
-import { getRelatedProducts, type Product } from "@/data/products";
+import { bySlug, relatedTo } from "@/lib/catalog";
+import { type Product } from "@/data/products";
 
-export function ProductView({ product }: { product: Product }) {
+export function ProductView({
+  slug,
+  fallback,
+}: {
+  slug: string;
+  fallback: Product | null;
+}) {
   const { t, locale } = useLocale();
   const { add, openDrawer } = useCart();
+  const { products } = useProducts();
   const [quantity, setQuantity] = useState(1);
   const [justAdded, setJustAdded] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
 
-  const related = getRelatedProducts(product, 4);
+  // Resolve from the live (admin-edited) store, falling back to the server copy.
+  const product = bySlug(products, slug) ?? fallback;
+
+  if (!product) {
+    return (
+      <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 py-24 text-center">
+        <p className="font-serif text-2xl text-emerald">
+          {t("notFound.title")}
+        </p>
+        <Link
+          href="/catalog"
+          className="mt-6 text-[11px] uppercase tracking-label text-muted hover:text-gold"
+        >
+          {t("actions.backToCatalog")}
+        </Link>
+      </div>
+    );
+  }
+
+  const related = relatedTo(products, product, 4);
   const priceLabel = formatPrice(product.priceUzs, locale);
 
-  function handleAdd() {
+  const handleAdd = () => {
     add(product.id, quantity);
     setJustAdded(true);
     openDrawer();
     window.setTimeout(() => setJustAdded(false), 2000);
-  }
+  };
 
   const tgMessage = t("product.telegramMessage", {
     name: product.name,
@@ -153,6 +184,22 @@ export function ProductView({ product }: { product: Product }) {
                   <Send size={15} />
                   {t("actions.askTelegram")}
                 </Button>
+
+                {/* Review ("obzor") video */}
+                {product.videoUrl ? (
+                  <button
+                    type="button"
+                    onClick={() => setVideoOpen(true)}
+                    className="group flex h-14 w-full items-center justify-center gap-3 border border-hairline text-[12px] uppercase tracking-label text-emerald transition-colors duration-300 hover:border-gold hover:text-gold"
+                  >
+                    <PlayCircle
+                      size={20}
+                      strokeWidth={1.4}
+                      className="text-gold transition-transform duration-300 group-hover:scale-110"
+                    />
+                    {t("product.watchReview")}
+                  </button>
+                ) : null}
               </div>
             </div>
 
@@ -234,6 +281,15 @@ export function ProductView({ product }: { product: Product }) {
         {/* Recently viewed */}
         <RecentlyViewed currentId={product.id} />
       </div>
+
+      {product.videoUrl ? (
+        <VideoModal
+          open={videoOpen}
+          onClose={() => setVideoOpen(false)}
+          url={product.videoUrl}
+          title={`${product.brand} ${product.name}`}
+        />
+      ) : null}
     </div>
   );
 }

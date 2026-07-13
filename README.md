@@ -132,6 +132,27 @@ The brand palette and typography tokens are defined in `tailwind.config.ts`
 
 ---
 
+## 🗂️ Admin panel (`/admin`)
+
+A built-in admin lets the client manage the catalog with **no code** — add / edit /
+delete products (all fields: name, brand, price, images, **review video**,
+trilingual descriptions, specs, featured, availability).
+
+- Open **`/admin`** and sign in. Password comes from `ADMIN_PASSWORD`
+  (default `obidsobitov` — **change it**).
+- Edits are saved in the browser (`localStorage`) and are **live immediately**
+  for that browser. To publish them to **all visitors**, click **Export** and
+  either (a) commit the downloaded `obid-products.json` (a developer wires it in),
+  or (b) connect a database later. **Import** restores an exported file; **Reset**
+  returns to the built-in defaults.
+- Each product can have a **review ("obzor") video** — paste a YouTube / Vimeo /
+  `.mp4` URL and a **"Watch review"** button appears on the product page that
+  opens the video in a player.
+
+> The admin is intentionally simple (file/localStorage based, no database). For a
+> fully shared, multi-device live catalog, connect a datastore — the product data
+> layer (`src/context/ProductsContext.tsx`) is the single integration point.
+
 ## 💳 Wiring real payments (Payme / Click)
 
 The checkout page (`src/components/checkout/CheckoutView.tsx`) currently

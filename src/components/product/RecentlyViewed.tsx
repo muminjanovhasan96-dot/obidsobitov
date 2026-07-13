@@ -5,7 +5,8 @@ import { useLocale } from "@/context/LocaleContext";
 import { ProductCard } from "@/components/ProductCard";
 import { GoldRule } from "@/components/ui/Section";
 import { trackView, getRecentIds } from "@/lib/recent";
-import { products, type Product } from "@/data/products";
+import { useProducts } from "@/context/ProductsContext";
+import { type Product } from "@/data/products";
 
 /**
  * Records the current product as viewed, then shows other recently-viewed
@@ -13,6 +14,7 @@ import { products, type Product } from "@/data/products";
  */
 export function RecentlyViewed({ currentId }: { currentId: string }) {
   const { t } = useLocale();
+  const { products } = useProducts();
   const [items, setItems] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ export function RecentlyViewed({ currentId }: { currentId: string }) {
       .slice(0, 4);
     setItems(list);
     trackView(currentId);
-  }, [currentId]);
+  }, [currentId, products]);
 
   if (items.length === 0) return null;
 

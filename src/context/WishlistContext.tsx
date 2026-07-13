@@ -9,7 +9,8 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { products, type Product } from "@/data/products";
+import { type Product } from "@/data/products";
+import { useProducts } from "./ProductsContext";
 
 const STORAGE_KEY = "obid-wishlist";
 
@@ -26,6 +27,7 @@ type WishlistContextValue = {
 const WishlistContext = createContext<WishlistContextValue | null>(null);
 
 export function WishlistProvider({ children }: { children: ReactNode }) {
+  const { products } = useProducts();
   const [ids, setIds] = useState<string[]>([]);
   const [isReady, setIsReady] = useState(false);
 
@@ -35,7 +37,7 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
       if (raw) {
         const parsed = JSON.parse(raw) as string[];
         if (Array.isArray(parsed)) {
-          setIds(parsed.filter((id) => products.some((p) => p.id === id)));
+          setIds(parsed.filter((id) => typeof id === "string"));
         }
       }
     } catch {
@@ -70,7 +72,7 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
       ids
         .map((id) => products.find((p) => p.id === id))
         .filter((p): p is Product => Boolean(p)),
-    [ids],
+    [ids, products],
   );
 
   const value = useMemo<WishlistContextValue>(

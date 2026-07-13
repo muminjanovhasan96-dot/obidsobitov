@@ -9,13 +9,9 @@ import { PageIntro } from "@/components/ui/PageIntro";
 import { ProductCard } from "@/components/ProductCard";
 import { FiltersPanel, type Filters } from "./FiltersPanel";
 import { SortSelect, type SortKey } from "./SortSelect";
-import {
-  products,
-  categories,
-  getBrands,
-  priceBounds,
-  type Category,
-} from "@/data/products";
+import { categories, type Category } from "@/data/products";
+import { useProducts } from "@/context/ProductsContext";
+import { brandsOf, priceBoundsOf } from "@/lib/catalog";
 
 function isCategory(value: string | null): value is Category {
   return !!value && (categories as string[]).includes(value);
@@ -23,6 +19,8 @@ function isCategory(value: string | null): value is Category {
 
 export function CatalogView() {
   const { t } = useLocale();
+  const { products } = useProducts();
+  const priceBounds = useMemo(() => priceBoundsOf(products), [products]);
   const searchParams = useSearchParams();
 
   const initialCategory: Category | "all" = isCategory(
@@ -51,8 +49,11 @@ export function CatalogView() {
 
   const availableBrands = useMemo(
     () =>
-      getBrands(filters.category === "all" ? undefined : filters.category),
-    [filters.category],
+      brandsOf(
+        products,
+        filters.category === "all" ? undefined : filters.category,
+      ),
+    [products, filters.category],
   );
 
   const results = useMemo(() => {
@@ -73,7 +74,7 @@ export function CatalogView() {
       sorted.sort((a, b) => b.priceUzs - a.priceUzs);
     // "newest" keeps the catalog's source order (first = newest).
     return sorted;
-  }, [filters, sort]);
+  }, [products, filters, sort]);
 
   const panelProps = {
     filters,

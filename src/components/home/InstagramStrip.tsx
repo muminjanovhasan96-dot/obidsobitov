@@ -7,13 +7,13 @@ import { SafeImage } from "@/components/ui/SafeImage";
 import { RevealLines } from "@/components/ui/RevealLines";
 import { StaggerGroup, StaggerItem } from "@/components/ui/AnimatedReveal";
 import { site } from "@/config/site";
-import { products } from "@/data/products";
-
-// A handful of images to evoke the feed. EDIT: point at real @obidsobitov_ posts.
-const FEED = products.slice(0, 6).map((p) => p.images[0]);
+import { useProducts } from "@/context/ProductsContext";
 
 export function InstagramStrip() {
   const { t } = useLocale();
+  const { products } = useProducts();
+  // A handful of images to evoke the feed. EDIT: point at real @obidsobitov_ posts.
+  const FEED = products.slice(0, 6).map((p) => p.images[0]);
 
   return (
     <Section className="border-t border-line">

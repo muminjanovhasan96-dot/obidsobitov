@@ -7,7 +7,7 @@ import { Search, X } from "lucide-react";
 import { useLocale } from "@/context/LocaleContext";
 import { SafeImage } from "@/components/ui/SafeImage";
 import { formatPrice } from "@/lib/format";
-import { products } from "@/data/products";
+import { useProducts } from "@/context/ProductsContext";
 
 export function SearchOverlay({
   open,
@@ -17,6 +17,7 @@ export function SearchOverlay({
   onClose: () => void;
 }) {
   const { t, locale } = useLocale();
+  const { products } = useProducts();
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -53,7 +54,7 @@ export function SearchOverlay({
         );
       })
       .slice(0, 6);
-  }, [query, t]);
+  }, [query, t, products]);
 
   return (
     <AnimatePresence>

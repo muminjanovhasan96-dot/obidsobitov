@@ -45,6 +45,8 @@ export type Product = {
   category: Category;
   priceUzs: number;
   images: string[];
+  /** Optional review/"obzor" video — a YouTube, Vimeo or direct .mp4 URL. */
+  videoUrl?: string;
   description: LocalizedText;
   specs: Spec[];
   featured: boolean;
@@ -89,6 +91,8 @@ export const products: Product[] = [
     brand: "Rolex",
     category: "watches",
     priceUzs: 189000000,
+    // EDIT: review ("obzor") video — YouTube / Vimeo / .mp4 URL. Optional.
+    videoUrl: "https://www.youtube.com/watch?v=Qhm7-LEBznk",
     images: [
       img("photo-1587836374828-4dbafa94cf0e"),
       img("photo-1523170335258-f5ed11844a49"),
@@ -116,6 +120,7 @@ export const products: Product[] = [
     brand: "Audemars Piguet",
     category: "watches",
     priceUzs: 495000000,
+    videoUrl: "https://www.youtube.com/watch?v=Qhm7-LEBznk",
     images: [
       img("photo-1523170335258-f5ed11844a49"),
       img("photo-1612817159949-195b6eb9e31a"),

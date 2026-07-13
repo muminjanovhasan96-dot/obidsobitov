@@ -9,7 +9,8 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { products, type Product } from "@/data/products";
+import { type Product } from "@/data/products";
+import { useProducts } from "./ProductsContext";
 
 const STORAGE_KEY = "obid-cart";
 
@@ -38,6 +39,7 @@ type CartContextValue = {
 const CartContext = createContext<CartContextValue | null>(null);
 
 export function CartProvider({ children }: { children: ReactNode }) {
+  const { products } = useProducts();
   const [lines, setLines] = useState<CartLine[]>([]);
   // `isReady` flips true after we hydrate from localStorage — lets the UI avoid
   // rendering a stale (empty) badge before hydration completes.
@@ -51,14 +53,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
       if (raw) {
         const parsed = JSON.parse(raw) as CartLine[];
         if (Array.isArray(parsed)) {
-          // Drop any lines whose product no longer exists in the catalog.
+          // Keep well-formed lines; unresolvable ids are dropped when joining.
           setLines(
             parsed.filter(
               (l) =>
-                l &&
-                typeof l.id === "string" &&
-                typeof l.quantity === "number" &&
-                products.some((p) => p.id === l.id),
+                l && typeof l.id === "string" && typeof l.quantity === "number",
             ),
           );
         }
@@ -116,7 +115,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         return product ? { product, quantity: line.quantity } : null;
       })
       .filter((x): x is CartItem => x !== null);
-  }, [lines]);
+  }, [lines, products]);
 
   const count = useMemo(
     () => items.reduce((sum, i) => sum + i.quantity, 0),
